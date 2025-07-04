@@ -1631,6 +1631,9 @@ img {
 }
 .commendation-img {
     flex: 0 0 auto;
+    max-width: 120px;
+    height: 160px;
+    object-fit: cover;
 }
 @media (max-width: 700px) {
     .commendations .section-header {
@@ -1643,7 +1646,22 @@ img {
         gap: 1rem;
     }
     .commendation-img {
-        max-width: 160px;
-        height: 220px;
+        max-width: 120px;
+        height: 160px;
     }
+}
+
+@media (min-width: 900px) {
+  .best-services-grid {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+}
+
+.commendations .section-header {
+  background: #e3f0fa !important;
+  border-radius: 12px;
+  padding: 1.5rem 0.7rem;
+  margin-bottom: 2rem;
 } 
