@@ -264,6 +264,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Disable right-click on images
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('contextmenu', e => e.preventDefault());
+    });
+});
+
 // --- Professional Animations: Intersection Observer for Fade/Slide-in ---
 function animateOnScroll() {
   const observer = new IntersectionObserver((entries, obs) => {
@@ -294,6 +301,10 @@ function createModal(content) {
     `;
     document.body.appendChild(modal);
     document.body.classList.add('custom-modal-open');
+    // Disable right-click on images inside modal
+    modal.querySelectorAll('img').forEach(img => {
+        img.addEventListener('contextmenu', e => e.preventDefault());
+    });
     // Close logic
     function closeModal() {
         modal.remove();
