@@ -1556,12 +1556,13 @@ img {
 
 .best-services-grid {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
     margin-top: 2rem;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    /* Remove horizontal scroll for better wrapping */
+    overflow-x: unset;
+    -webkit-overflow-scrolling: unset;
 }
 .best-service-card {
     background: #1f2937;
@@ -1620,29 +1621,29 @@ img {
     background-color: var(--gray-100);
 }
 .commendations-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    display: flex;
+    flex-wrap: nowrap;
     gap: 2rem;
-    justify-items: center;
-    align-items: start;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 .commendation-img {
-    width: 100%;
-    max-width: 220px;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    flex: 0 0 auto;
 }
-.commendation-img:hover {
-    transform: scale(1.04) rotate(-1deg);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.13);
-}
-.commendations .section-header {
-    background: #e3f0fa !important;
-    border-radius: 12px;
-    padding: 2rem 1rem;
-    margin-bottom: 2.5rem;
+@media (max-width: 700px) {
+    .commendations .section-header {
+        background: #e3f0fa !important;
+        border-radius: 12px;
+        padding: 1.5rem 0.7rem;
+        margin-bottom: 2rem;
+    }
+    .commendations-grid {
+        gap: 1rem;
+    }
+    .commendation-img {
+        max-width: 160px;
+        height: 220px;
+    }
 } 
