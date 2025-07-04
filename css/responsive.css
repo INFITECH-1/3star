@@ -508,40 +508,38 @@
 }
 
 /* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --white: #1f2937;
-        --gray-100: #374151;
-        --gray-200: #4b5563;
-        --gray-300: #6b7280;
-        --gray-400: #9ca3af;
-        --gray-500: #d1d5db;
-        --gray-600: #e5e7eb;
-        --gray-700: #f3f4f6;
-        --gray-800: #f9fafb;
-        --gray-900: #ffffff;
-        --text-dark: #f9fafb;
-        --text-light: #d1d5db;
-    }
-    
-    .navbar {
-        background-color: var(--gray-800);
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-    }
-    
-    .nav-link {
-        color: var(--text-dark);
-    }
-    
-    .service-card,
-    .project-card,
-    .testimonial,
-    .contact-form {
-        background-color: var(--gray-700);
-        border: 1px solid var(--gray-600);
-    }
-    
-    .certificate {
-        background-color: var(--gray-700);
-    }
+:root {
+    --white: #1f2937;
+    --gray-100: #374151;
+    --gray-200: #4b5563;
+    --gray-300: #6b7280;
+    --gray-400: #9ca3af;
+    --gray-500: #d1d5db;
+    --gray-600: #e5e7eb;
+    --gray-700: #f3f4f6;
+    --gray-800: #f9fafb;
+    --gray-900: #ffffff;
+    --text-dark: #f9fafb;
+    --text-light: #d1d5db;
+}
+
+.navbar {
+    background-color: var(--gray-800);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link {
+    color: var(--text-dark);
+}
+
+.service-card,
+.project-card,
+.testimonial,
+.contact-form {
+    background-color: var(--gray-700);
+    border: 1px solid var(--gray-600);
+}
+
+.certificate {
+    background-color: var(--gray-700);
 } 
